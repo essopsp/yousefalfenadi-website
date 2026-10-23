@@ -3,7 +3,7 @@
  * تُحفظ في localStorage تحت مفتاح واحد: {"18": 293} — رقم الصفحة في المصحف (1..604).
  */
 
-export const READ_PAGE_KEY = "mselati:pages";
+export const READ_PAGE_KEY = "fenadi:pages";
 
 type PageMap = Record<string, number>;
 

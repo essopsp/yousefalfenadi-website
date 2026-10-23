@@ -3,10 +3,10 @@ export type TextSize = "base" | "large" | "xlarge";
 export type LayoutMode = "list" | "mushaf" | "pages";
 export type EffectMode = "fade" | "reveal";
 
-export const THEME_KEY = "mselati:theme";
-export const TEXTSIZE_KEY = "mselati:textsize";
-export const LAYOUT_KEY = "mselati:layout";
-export const EFFECT_KEY = "mselati:effect";
+export const THEME_KEY = "fenadi:theme";
+export const TEXTSIZE_KEY = "fenadi:textsize";
+export const LAYOUT_KEY = "fenadi:layout";
+export const EFFECT_KEY = "fenadi:effect";
 
 export const THEMES: Theme[] = ["light", "dark", "system"];
 export const TEXT_SIZES: TextSize[] = ["base", "large", "xlarge"];

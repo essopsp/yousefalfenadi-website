@@ -5,7 +5,7 @@ import { audioUrl, getRecitation, getSurah, surahs } from "@/lib/data";
 
 export const SPEEDS = [0.75, 1, 1.25, 1.5, 1.75, 2] as const;
 
-const STORAGE_KEY = "mselati:player:v1";
+const STORAGE_KEY = "fenadi:player:v1";
 
 interface StoredSession {
   surah: number;
@@ -302,10 +302,10 @@ function updateMediaSession(surahNumber: number | null, rate: number) {
   if (!surah) return;
   ms.metadata = new MediaMetadata({
     title: `سورة ${surah.nameAr}`,
-    artist: "الشيخ يوسف الفنادي",
+    artist: "الشيخ يوسف الفنّادي",
     album: "رواية قالون عن نافع",
     artwork: [
-      { src: "/assets/images/hero.jpg", sizes: "512x512", type: "image/jpeg" },
+      { src: "/assets/images/cover.jpg", sizes: "512x512", type: "image/jpeg" },
     ],
   });
 }

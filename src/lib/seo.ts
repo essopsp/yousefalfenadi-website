@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/i18n/config";
 import { href } from "@/i18n/config";
 
-export const SITE_URL = "https://yousefalfenadi.com.ly";
+export const SITE_URL = "https://yousefalfenadi-website.pages.dev";
 export const OG_IMAGE = "/assets/images/og-image.jpg";
 
 /**
@@ -38,7 +38,7 @@ export function pageMetadata({
       title,
       description,
       url: canonical,
-      siteName: "يوسف الفنادي",
+      siteName: "يوسف الفنّادي",
       locale: locale === "ar" ? "ar_LY" : "en_US",
       alternateLocale: locale === "ar" ? "en_US" : "ar_LY",
       type: type === "music.song" ? "music.song" : "website",

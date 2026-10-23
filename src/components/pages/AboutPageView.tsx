@@ -37,7 +37,7 @@ export function AboutPageView({
             />
           ) : (
             <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 rounded-2xl border border-line bg-surface">
-              <span className="font-display text-5xl text-accent/25">نور</span>
+              <span className="font-display text-5xl text-accent/25">يوسف</span>
               <span className="px-6 text-center text-xs text-muted">
                 {dict.site.riwayah}
               </span>

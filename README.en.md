@@ -1,10 +1,12 @@
-# Personal website of reciter Nour Eddine Al-Meslati
+# Personal website of reciter Yousef Al-Fenadi
 
 > النسخة العربية: [README.md](README.md)
 
-A fully static site for the complete Quran recitations — **114 surahs in the Qaloon 'an Nafi narration** — with a persistent audio player, a continuous mushaf-style text, and word-by-word tracking during recitation. Arabic (default) and English.
+A fully static site for the complete Quran recitations — **114 surahs in the Qaloon 'an Nafi narration** — with a persistent audio player and continuous mushaf-style text. Arabic (default) and English.
 
-- **Live:** https://yousefalfenadi.com.ly · English version: `/en/`
+> The khatmah used here is the **Ramadan 1447 / 2026 tarawih** set from the Sheikh's Telegram channel. Word timings have not been generated for this khatmah yet, so the text displays without live tracking until the timing pipeline is run.
+
+- **Live:** https://yousefalfenadi-website.pages.dev · English version: `/en/`
 - **Full specification:** `PRD.md` (Arabic)
 
 ## Features
@@ -82,8 +84,7 @@ public/fonts/           Self-hosted fonts
 | `src/data/surahs.json` | 114 surahs: number, name, meaning, Makki/Madani, ayah count | small |
 | `src/data/recitations.json` | Maps each surah to its audio file and duration | small |
 | `src/data/quran/qalun/NNN.json` | Mushaf text in the Qaloon narration: `{a, hafs[], t}` per ayah | 1.8 MB |
-| `src/data/quran/timings/NNN.json` | Per-ayah timing: `{a, start, end, score}` | 636 KB |
-| `src/data/quran/timings/words-NNN.json` | Per-word timing `[[start,end],…]` in text order | 1.2 MB |
+| `src/data/quran/timings/` | Ayah and word timings — **not generated for this khatmah yet** | — |
 
 ### Refreshing the data
 
@@ -98,6 +99,8 @@ The text comes from [iptvchecker/content-quran-json](https://github.com/iptvchec
 
 ## Timing pipeline
 
+> Status: the previous khatmah's timings were removed because they do not match Sheikh Yousef Al-Fenadi's audio. The reader now runs without highlighting or time seeking until this khatmah is timed.
+
 Timings are produced by force-aligning the audio against the known mushaf text: speech recognition with word-level timestamps (faster-whisper `large-v3`), then a global hierarchical alignment (Needleman–Wunsch) between the known mushaf words and the recognised ones. The computation runs on a **Kaggle GPU**, since running whisper locally is not practical.
 
 ```bash
@@ -105,16 +108,18 @@ Timings are produced by force-aligning the audio against the known mushaf text: 
 cd tools/kaggle-timing
 kaggle kernels push -p . --accelerator NvidiaTeslaT4 --timeout 28800
 # 2) Download the outputs: timings-*.json, qc-*.md, asr-words-*.json
-kaggle kernels output <kaggle-user>/mselati-qaloon-timing -p /tmp/kaggle-out
+kaggle kernels output <kaggle-user>/yousefalfenadi-qaloon-timing -p /tmp/kaggle-out
 # 3) Derive per-word timings locally from the saved ASR output (no GPU, minutes)
 python3 tools/kaggle-timing/emit_word_timings.py /tmp/kaggle-out
 ```
 
 The saved `asr-words-NNN.json` files are the source that `words-NNN.json` is built from locally; the kernel does not need to be re-run to refine word accuracy. Kernel configuration (GPU, internet, private) lives in `kernel-metadata.json`, and it expects a Kaggle credential under `~/.kaggle/` (never inside the repository).
 
-Measured quality across the whole mushaf: 99.2% of ayat have a normal recognised-word coverage, mean alignment score 0.84, and 99.8% of words (out of 77,853) are mapped directly to an ASR timestamp with the remainder interpolated inside their ayah span.
+Once generated, the outputs go into `src/data/quran/timings/`: `NNN.json` per surah (ayah timings) and `words-NNN.json` (word timings). Update `AUDIO_BASE` in `tools/kaggle-timing/align_qaloon.py` to the new R2 URL before running; `TEXT_BASE` stays pointed at the `essopsp/yousefalfenadi-website` repository.
 
 ## Audio on R2
+
+> The surah-to-file mapping is documented in `audio-mapping-review.csv` (114 rows: surah number, Telegram file name, duration, source message).
 
 Audio files are **never committed to Git** (`*.mp3`, `audio-raw/` and `audio-final/` are excluded in `.gitignore`); they are hosted on Cloudflare R2 behind a custom subdomain with `Cache-Control: public, max-age=31536000, immutable` and Range request support for seeking within a surah.
 
@@ -133,4 +138,4 @@ Every push to `main` runs `.github/workflows/deploy.yml`: `npm ci` → `npm run 
 - **Mushaf text:** Qaloon 'an Nafi mushaf edition — Quranpedia / KFGQPC via `iptvchecker/content-quran-json`, licensed **CC BY-SA 4.0** (attribution is shown inside the website).
 - **Fonts:** Amiri Quran · Noto Naskh Arabic · Reem Kufi · Inter — all under the SIL Open Font License, self-hosted.
 - **Mushaf typeface:** KFGQPC Qaloon 10 (WOFF2) — hosted as is, with **no modification or subsetting**, under the King Fahd Glorious Quran Printing Complex licence. It is used for the text in the “Mushaf (pages)” layout and for the ayah number rosette in all three layouts.
-- **Recitations:** all rights to the recorded recitations belong to Sheikh Nour Eddine Al-Meslati; they may not be reused without his permission.
+- **Recitations:** all rights to the recorded recitations belong to Sheikh Yousef Al-Fenadi; they may not be reused without his permission.

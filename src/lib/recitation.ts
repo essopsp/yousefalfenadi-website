@@ -28,6 +28,8 @@ export function wordIndexAt(flat: FlatWord[], time: number): number {
       hi = mid - 1;
     }
   }
+  // لا توقيتات متاحة لهذه الكلمة (s = -1) → لا تلوين
+  if (found >= 0 && flat[found].s < 0) return -1;
   return found;
 }
 
@@ -53,7 +55,8 @@ export function buildFlatWords(
       }
       return;
     }
-    for (let k = 0; k < parts.length; k++) out.push({ s: 0, e: 0, ai });
+    // بلا توقيتات: s = -1 حتى لا تُلوَّن الكلمات خطأً
+    for (let k = 0; k < parts.length; k++) out.push({ s: -1, e: -1, ai });
   });
   return out;
 }

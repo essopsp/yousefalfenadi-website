@@ -1,10 +1,10 @@
 {
   "site": {
-    "name": "Nour Eddine Al-Meslati",
+    "name": "Yousef Al-Fenadi",
     "tagline": "Reciter of the Holy Quran",
     "riwayah": "Qaloon 'an Nafi' narration",
-    "title": "Nour Eddine Al-Meslati — Quran Recitations in Qaloon Narration",
-    "description": "Listen to the complete Quran recitation by Sheikh Nour Eddine Al-Meslati in Qaloon 'an Nafi' narration. 114 surahs in high quality, no ads, no sign-up.",
+    "title": "Sheikh Yousef Al-Fenadi — Quran Recitations in Qaloon Narration",
+    "description": "Listen to the complete Quran recitation by Sheikh Yousef Al-Fenadi in Qaloon 'an Nafi' narration, recorded at Al-Diyar Mosque in Tripoli. 114 surahs in high quality, no ads, no sign-up.",
     "langName": "English"
   },
   "nav": {
@@ -14,7 +14,7 @@
     "switchTo": "العربية"
   },
   "home": {
-    "intro": "The complete Quran recitation in Qaloon 'an Nafi' narration, recited calmly and precisely. Listen from any device — no ads, no sign-up.",
+    "intro": "The complete Quran recitation in Qaloon 'an Nafi' narration, recited calmly and precisely at Al-Diyar Mosque in Tripoli. Listen from any device — no ads, no sign-up.",
     "listenNow": "Listen now",
     "browseSurahs": "Browse surahs",
     "aboutTitle": "About the Sheikh",
@@ -22,7 +22,7 @@
     "featuredTitle": "Featured recitations",
     "featuredSubtitle": "Start here",
     "shareTitle": "Share the website",
-    "shareText": "The complete Quran recitation by Sheikh Nour Eddine Al-Meslati in Qaloon narration"
+    "shareText": "The complete Quran recitation by Sheikh Yousef Al-Fenadi in Qaloon narration"
   },
   "surahs": {
     "title": "Recitations",
@@ -72,11 +72,11 @@
   },
   "about": {
     "title": "About the Sheikh",
-    "placeholder": "Sheikh Nour Eddine Al-Meslati is a Libyan reciter who recites the Holy Quran in the Qaloon 'an Nafi' narration — the narration used in Libya and long established in Msallata, the city his name is attributed to.",
+    "placeholder": "Sheikh Yousef Al-Fenadi is a Libyan reciter who recites the Holy Quran in the Qaloon 'an Nafi' narration, the narration used in Libya. This khatmah was recorded at Al-Diyar Mosque, Souq al-Jumaa, Tripoli.",
     "bio": [
-      "Sheikh Nour Eddine Al-Meslati is a Quran reciter from Libya. He is attributed to the city of Msallata, known for the memorisation of the Quran and for reciting it in the Qaloon 'an Nafi' narration.",
-      "He recites the entire Quran in the Qaloon 'an Nafi' narration — the reading of Imam Qaloon from Imam Nafi' of Madinah — which is the narration adopted in Libyan mushafs and used in its mosques and Quran schools.",
-      "This khatmah includes all 114 surahs, offered here for listening and free download, retaining the original recording quality without any modification.",
+      "Sheikh Yousef Al-Fenadi is a Quran reciter from Libya. He recites in the Qaloon 'an Nafi' narration — the reading adopted in Libyan mushafs and used in its mosques and Quran schools.",
+      "This khatmah includes all 114 surahs, recorded during the Ramadan 1447 / 2026 tarawih prayers at Al-Diyar Mosque, Souq al-Jumaa, Tripoli.",
+      "All recitations are offered here for listening and free download, retaining the original recording quality without any modification.",
       "To follow new recitations, you can visit the Sheikh's channel on Telegram."
     ],
     "contactTitle": "Contact",
@@ -84,8 +84,8 @@
     "links": [
       {
         "label": "Telegram",
-        "href": "https://t.me/Nouraldinrecitation",
-        "handle": "The complete khatmah of Sheikh Nour Eddine Al-Meslati"
+        "href": "https://t.me/YousefAlFenadi",
+        "handle": "Sheikh Yousef Al-Fenadi's recitation channel"
       }
     ]
   },
@@ -131,8 +131,8 @@
   },
   "meta": {
     "surahTitle": "Surah {surah}",
-    "surahDescription": "Listen to Surah {surah} recited by Sheikh Nour Eddine Al-Meslati in Qaloon 'an Nafi' narration — {ayahs} verses.",
+    "surahDescription": "Listen to Surah {surah} recited by Sheikh Yousef Al-Fenadi in Qaloon 'an Nafi' narration — {ayahs} verses.",
     "surahsTitle": "Recitations — 114 surahs",
-    "aboutTitle": "About Sheikh Nour Eddine Al-Meslati"
+    "aboutTitle": "About Sheikh Yousef Al-Fenadi"
   }
 }

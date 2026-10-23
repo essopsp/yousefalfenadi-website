@@ -34,7 +34,7 @@ export function Header() {
           className="group flex min-w-0 items-center gap-3"
         >
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/40 font-display text-lg text-accent">
-            ن
+            ي
           </span>
           <span className="sr-only min-w-0 sm:not-sr-only">
             <span className="block truncate font-display text-[1.05rem] leading-5 text-ink group-hover:text-accent">

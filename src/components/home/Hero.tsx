@@ -50,7 +50,7 @@ export function Hero({
           />
         ) : (
           <div className="mx-auto flex aspect-[4/5] w-full max-w-sm flex-col items-center justify-center gap-6 rounded-2xl border border-line bg-surface lg:max-w-none">
-            <span className="font-display text-7xl text-accent/25">نور</span>
+            <span className="font-display text-7xl text-accent/25">يوسف</span>
             <Motif className="opacity-70" />
             <span className="px-8 text-center text-sm text-muted">
               {dict.site.riwayah}

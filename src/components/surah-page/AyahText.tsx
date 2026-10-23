@@ -132,7 +132,7 @@ export function AyahText({
     if (word) {
       const idx = wordEls.current.indexOf(word);
       const at = idx >= 0 ? flat[idx] : undefined;
-      if (at) usePlayer.getState().playAt(surah, at.s);
+      if (at && at.s >= 0) usePlayer.getState().playAt(surah, at.s);
       return;
     }
     const ayah = target.closest<HTMLElement>("[data-ai]");

@@ -1,0 +1,29 @@
+# Audio files must never be committed (hosted on Cloudflare R2)
+audio-raw/
+audio-final/
+/public/assets/audio/
+*.mp3
+
+# Secrets — never commit
+R2_secret.txt
+r2-secret*
+.r2-credentials
+
+# Env
+.env*.local
+.env
+
+# Node
+node_modules/
+.next/
+out/
+*.log
+tsconfig.tsbuildinfo
+.DS_Store
+
+# Cloudflare API token — never commit
+.cf_token
+
+# Python
+__pycache__/
+*.pyc

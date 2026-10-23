@@ -1,0 +1,914 @@
+[
+ {
+  "number": 1,
+  "nameAr": "الفاتحة",
+  "nameEn": "Al-Fatihah",
+  "meaningEn": "The Opening",
+  "type": "makki",
+  "ayahCount": 7
+ },
+ {
+  "number": 2,
+  "nameAr": "البقرة",
+  "nameEn": "Al-Baqarah",
+  "meaningEn": "The Cow",
+  "type": "madani",
+  "ayahCount": 285
+ },
+ {
+  "number": 3,
+  "nameAr": "آل عمران",
+  "nameEn": "Ali 'Imran",
+  "meaningEn": "The Family of Imran",
+  "type": "madani",
+  "ayahCount": 200
+ },
+ {
+  "number": 4,
+  "nameAr": "النساء",
+  "nameEn": "An-Nisa",
+  "meaningEn": "The Women",
+  "type": "madani",
+  "ayahCount": 175
+ },
+ {
+  "number": 5,
+  "nameAr": "المائدة",
+  "nameEn": "Al-Ma'idah",
+  "meaningEn": "The Table Spread",
+  "type": "madani",
+  "ayahCount": 122
+ },
+ {
+  "number": 6,
+  "nameAr": "الأنعام",
+  "nameEn": "Al-An'am",
+  "meaningEn": "The Cattle",
+  "type": "makki",
+  "ayahCount": 167
+ },
+ {
+  "number": 7,
+  "nameAr": "الأعراف",
+  "nameEn": "Al-A'raf",
+  "meaningEn": "The Heights",
+  "type": "makki",
+  "ayahCount": 206
+ },
+ {
+  "number": 8,
+  "nameAr": "الأنفال",
+  "nameEn": "Al-Anfal",
+  "meaningEn": "The Spoils of War",
+  "type": "madani",
+  "ayahCount": 76
+ },
+ {
+  "number": 9,
+  "nameAr": "التوبة",
+  "nameEn": "At-Tawbah",
+  "meaningEn": "The Repentance",
+  "type": "madani",
+  "ayahCount": 130
+ },
+ {
+  "number": 10,
+  "nameAr": "يونس",
+  "nameEn": "Yunus",
+  "meaningEn": "Jonah",
+  "type": "makki",
+  "ayahCount": 109
+ },
+ {
+  "number": 11,
+  "nameAr": "هود",
+  "nameEn": "Hud",
+  "meaningEn": "Hud",
+  "type": "makki",
+  "ayahCount": 121
+ },
+ {
+  "number": 12,
+  "nameAr": "يوسف",
+  "nameEn": "Yusuf",
+  "meaningEn": "Joseph",
+  "type": "makki",
+  "ayahCount": 111
+ },
+ {
+  "number": 13,
+  "nameAr": "الرعد",
+  "nameEn": "Ar-Ra'd",
+  "meaningEn": "The Thunder",
+  "type": "madani",
+  "ayahCount": 44
+ },
+ {
+  "number": 14,
+  "nameAr": "إبراهيم",
+  "nameEn": "Ibrahim",
+  "meaningEn": "Abraham",
+  "type": "makki",
+  "ayahCount": 54
+ },
+ {
+  "number": 15,
+  "nameAr": "الحجر",
+  "nameEn": "Al-Hijr",
+  "meaningEn": "The Rocky Tract",
+  "type": "makki",
+  "ayahCount": 99
+ },
+ {
+  "number": 16,
+  "nameAr": "النحل",
+  "nameEn": "An-Nahl",
+  "meaningEn": "The Bee",
+  "type": "makki",
+  "ayahCount": 128
+ },
+ {
+  "number": 17,
+  "nameAr": "الإسراء",
+  "nameEn": "Al-Isra",
+  "meaningEn": "The Night Journey",
+  "type": "makki",
+  "ayahCount": 110
+ },
+ {
+  "number": 18,
+  "nameAr": "الكهف",
+  "nameEn": "Al-Kahf",
+  "meaningEn": "The Cave",
+  "type": "makki",
+  "ayahCount": 105
+ },
+ {
+  "number": 19,
+  "nameAr": "مريم",
+  "nameEn": "Maryam",
+  "meaningEn": "Mary",
+  "type": "makki",
+  "ayahCount": 99
+ },
+ {
+  "number": 20,
+  "nameAr": "طه",
+  "nameEn": "Taha",
+  "meaningEn": "Ta-Ha",
+  "type": "makki",
+  "ayahCount": 134
+ },
+ {
+  "number": 21,
+  "nameAr": "الأنبياء",
+  "nameEn": "Al-Anbiya",
+  "meaningEn": "The Prophets",
+  "type": "makki",
+  "ayahCount": 111
+ },
+ {
+  "number": 22,
+  "nameAr": "الحج",
+  "nameEn": "Al-Hajj",
+  "meaningEn": "The Pilgrimage",
+  "type": "madani",
+  "ayahCount": 76
+ },
+ {
+  "number": 23,
+  "nameAr": "المؤمنون",
+  "nameEn": "Al-Mu'minun",
+  "meaningEn": "The Believers",
+  "type": "makki",
+  "ayahCount": 119
+ },
+ {
+  "number": 24,
+  "nameAr": "النور",
+  "nameEn": "An-Nur",
+  "meaningEn": "The Light",
+  "type": "madani",
+  "ayahCount": 62
+ },
+ {
+  "number": 25,
+  "nameAr": "الفرقان",
+  "nameEn": "Al-Furqan",
+  "meaningEn": "The Criterion",
+  "type": "makki",
+  "ayahCount": 77
+ },
+ {
+  "number": 26,
+  "nameAr": "الشعراء",
+  "nameEn": "Ash-Shu'ara",
+  "meaningEn": "The Poets",
+  "type": "makki",
+  "ayahCount": 226
+ },
+ {
+  "number": 27,
+  "nameAr": "النمل",
+  "nameEn": "An-Naml",
+  "meaningEn": "The Ant",
+  "type": "makki",
+  "ayahCount": 95
+ },
+ {
+  "number": 28,
+  "nameAr": "القصص",
+  "nameEn": "Al-Qasas",
+  "meaningEn": "The Stories",
+  "type": "makki",
+  "ayahCount": 88
+ },
+ {
+  "number": 29,
+  "nameAr": "العنكبوت",
+  "nameEn": "Al-Ankabut",
+  "meaningEn": "The Spider",
+  "type": "makki",
+  "ayahCount": 69
+ },
+ {
+  "number": 30,
+  "nameAr": "الروم",
+  "nameEn": "Ar-Rum",
+  "meaningEn": "The Romans",
+  "type": "makki",
+  "ayahCount": 59
+ },
+ {
+  "number": 31,
+  "nameAr": "لقمان",
+  "nameEn": "Luqman",
+  "meaningEn": "Luqman",
+  "type": "makki",
+  "ayahCount": 33
+ },
+ {
+  "number": 32,
+  "nameAr": "السجدة",
+  "nameEn": "As-Sajdah",
+  "meaningEn": "The Prostration",
+  "type": "makki",
+  "ayahCount": 30
+ },
+ {
+  "number": 33,
+  "nameAr": "الأحزاب",
+  "nameEn": "Al-Ahzab",
+  "meaningEn": "The Combined Forces",
+  "type": "madani",
+  "ayahCount": 73
+ },
+ {
+  "number": 34,
+  "nameAr": "سبأ",
+  "nameEn": "Saba",
+  "meaningEn": "Sheba",
+  "type": "makki",
+  "ayahCount": 54
+ },
+ {
+  "number": 35,
+  "nameAr": "فاطر",
+  "nameEn": "Fatir",
+  "meaningEn": "Originator",
+  "type": "makki",
+  "ayahCount": 46
+ },
+ {
+  "number": 36,
+  "nameAr": "يس",
+  "nameEn": "Ya-Sin",
+  "meaningEn": "Ya Sin",
+  "type": "makki",
+  "ayahCount": 82
+ },
+ {
+  "number": 37,
+  "nameAr": "الصافات",
+  "nameEn": "As-Saffat",
+  "meaningEn": "Those Who Set The Ranks",
+  "type": "makki",
+  "ayahCount": 182
+ },
+ {
+  "number": 38,
+  "nameAr": "ص",
+  "nameEn": "Sad",
+  "meaningEn": "The Letter Sad",
+  "type": "makki",
+  "ayahCount": 86
+ },
+ {
+  "number": 39,
+  "nameAr": "الزمر",
+  "nameEn": "Az-Zumar",
+  "meaningEn": "The Troops",
+  "type": "makki",
+  "ayahCount": 72
+ },
+ {
+  "number": 40,
+  "nameAr": "غافر",
+  "nameEn": "Ghafir",
+  "meaningEn": "The Forgiver",
+  "type": "makki",
+  "ayahCount": 84
+ },
+ {
+  "number": 41,
+  "nameAr": "فصلت",
+  "nameEn": "Fussilat",
+  "meaningEn": "Explained in Detail",
+  "type": "makki",
+  "ayahCount": 53
+ },
+ {
+  "number": 42,
+  "nameAr": "الشورى",
+  "nameEn": "Ash-Shura",
+  "meaningEn": "The Consultation",
+  "type": "makki",
+  "ayahCount": 50
+ },
+ {
+  "number": 43,
+  "nameAr": "الزخرف",
+  "nameEn": "Az-Zukhruf",
+  "meaningEn": "The Ornaments of Gold",
+  "type": "makki",
+  "ayahCount": 89
+ },
+ {
+  "number": 44,
+  "nameAr": "الدخان",
+  "nameEn": "Ad-Dukhan",
+  "meaningEn": "The Smoke",
+  "type": "makki",
+  "ayahCount": 56
+ },
+ {
+  "number": 45,
+  "nameAr": "الجاثية",
+  "nameEn": "Al-Jathiyah",
+  "meaningEn": "The Crouching",
+  "type": "makki",
+  "ayahCount": 36
+ },
+ {
+  "number": 46,
+  "nameAr": "الأحقاف",
+  "nameEn": "Al-Ahqaf",
+  "meaningEn": "The Wind-Curved Sandhills",
+  "type": "makki",
+  "ayahCount": 34
+ },
+ {
+  "number": 47,
+  "nameAr": "محمد",
+  "nameEn": "Muhammad",
+  "meaningEn": "Muhammad",
+  "type": "madani",
+  "ayahCount": 39
+ },
+ {
+  "number": 48,
+  "nameAr": "الفتح",
+  "nameEn": "Al-Fath",
+  "meaningEn": "The Victory",
+  "type": "madani",
+  "ayahCount": 29
+ },
+ {
+  "number": 49,
+  "nameAr": "الحجرات",
+  "nameEn": "Al-Hujurat",
+  "meaningEn": "The Rooms",
+  "type": "madani",
+  "ayahCount": 18
+ },
+ {
+  "number": 50,
+  "nameAr": "ق",
+  "nameEn": "Qaf",
+  "meaningEn": "The Letter Qaf",
+  "type": "makki",
+  "ayahCount": 45
+ },
+ {
+  "number": 51,
+  "nameAr": "الذاريات",
+  "nameEn": "Adh-Dhariyat",
+  "meaningEn": "The Winnowing Winds",
+  "type": "makki",
+  "ayahCount": 60
+ },
+ {
+  "number": 52,
+  "nameAr": "الطور",
+  "nameEn": "At-Tur",
+  "meaningEn": "The Mount",
+  "type": "makki",
+  "ayahCount": 47
+ },
+ {
+  "number": 53,
+  "nameAr": "النجم",
+  "nameEn": "An-Najm",
+  "meaningEn": "The Star",
+  "type": "makki",
+  "ayahCount": 61
+ },
+ {
+  "number": 54,
+  "nameAr": "القمر",
+  "nameEn": "Al-Qamar",
+  "meaningEn": "The Moon",
+  "type": "makki",
+  "ayahCount": 55
+ },
+ {
+  "number": 55,
+  "nameAr": "الرحمن",
+  "nameEn": "Ar-Rahman",
+  "meaningEn": "The Beneficent",
+  "type": "madani",
+  "ayahCount": 77
+ },
+ {
+  "number": 56,
+  "nameAr": "الواقعة",
+  "nameEn": "Al-Waqi'ah",
+  "meaningEn": "The Inevitable",
+  "type": "makki",
+  "ayahCount": 99
+ },
+ {
+  "number": 57,
+  "nameAr": "الحديد",
+  "nameEn": "Al-Hadid",
+  "meaningEn": "The Iron",
+  "type": "madani",
+  "ayahCount": 28
+ },
+ {
+  "number": 58,
+  "nameAr": "المجادلة",
+  "nameEn": "Al-Mujadilah",
+  "meaningEn": "The Pleading Woman",
+  "type": "madani",
+  "ayahCount": 21
+ },
+ {
+  "number": 59,
+  "nameAr": "الحشر",
+  "nameEn": "Al-Hashr",
+  "meaningEn": "The Exile",
+  "type": "madani",
+  "ayahCount": 24
+ },
+ {
+  "number": 60,
+  "nameAr": "الممتحنة",
+  "nameEn": "Al-Mumtahanah",
+  "meaningEn": "She That Is To Be Examined",
+  "type": "madani",
+  "ayahCount": 13
+ },
+ {
+  "number": 61,
+  "nameAr": "الصف",
+  "nameEn": "As-Saff",
+  "meaningEn": "The Ranks",
+  "type": "madani",
+  "ayahCount": 14
+ },
+ {
+  "number": 62,
+  "nameAr": "الجمعة",
+  "nameEn": "Al-Jumu'ah",
+  "meaningEn": "The Congregation, Friday",
+  "type": "madani",
+  "ayahCount": 11
+ },
+ {
+  "number": 63,
+  "nameAr": "المنافقون",
+  "nameEn": "Al-Munafiqun",
+  "meaningEn": "The Hypocrites",
+  "type": "madani",
+  "ayahCount": 11
+ },
+ {
+  "number": 64,
+  "nameAr": "التغابن",
+  "nameEn": "At-Taghabun",
+  "meaningEn": "The Mutual Disillusion",
+  "type": "madani",
+  "ayahCount": 18
+ },
+ {
+  "number": 65,
+  "nameAr": "الطلاق",
+  "nameEn": "At-Talaq",
+  "meaningEn": "The Divorce",
+  "type": "madani",
+  "ayahCount": 12
+ },
+ {
+  "number": 66,
+  "nameAr": "التحريم",
+  "nameEn": "At-Tahrim",
+  "meaningEn": "The Prohibition",
+  "type": "madani",
+  "ayahCount": 12
+ },
+ {
+  "number": 67,
+  "nameAr": "الملك",
+  "nameEn": "Al-Mulk",
+  "meaningEn": "The Sovereignty",
+  "type": "makki",
+  "ayahCount": 31
+ },
+ {
+  "number": 68,
+  "nameAr": "القلم",
+  "nameEn": "Al-Qalam",
+  "meaningEn": "The Pen",
+  "type": "makki",
+  "ayahCount": 52
+ },
+ {
+  "number": 69,
+  "nameAr": "الحاقة",
+  "nameEn": "Al-Haqqah",
+  "meaningEn": "The Reality",
+  "type": "makki",
+  "ayahCount": 52
+ },
+ {
+  "number": 70,
+  "nameAr": "المعارج",
+  "nameEn": "Al-Ma'arij",
+  "meaningEn": "The Ascending Stairways",
+  "type": "makki",
+  "ayahCount": 44
+ },
+ {
+  "number": 71,
+  "nameAr": "نوح",
+  "nameEn": "Nuh",
+  "meaningEn": "Noah",
+  "type": "makki",
+  "ayahCount": 30
+ },
+ {
+  "number": 72,
+  "nameAr": "الجن",
+  "nameEn": "Al-Jinn",
+  "meaningEn": "The Jinn",
+  "type": "makki",
+  "ayahCount": 28
+ },
+ {
+  "number": 73,
+  "nameAr": "المزمل",
+  "nameEn": "Al-Muzzammil",
+  "meaningEn": "The Enshrouded One",
+  "type": "makki",
+  "ayahCount": 18
+ },
+ {
+  "number": 74,
+  "nameAr": "المدثر",
+  "nameEn": "Al-Muddaththir",
+  "meaningEn": "The Cloaked One",
+  "type": "makki",
+  "ayahCount": 55
+ },
+ {
+  "number": 75,
+  "nameAr": "القيامة",
+  "nameEn": "Al-Qiyamah",
+  "meaningEn": "The Resurrection",
+  "type": "makki",
+  "ayahCount": 39
+ },
+ {
+  "number": 76,
+  "nameAr": "الإنسان",
+  "nameEn": "Al-Insan",
+  "meaningEn": "The Man",
+  "type": "madani",
+  "ayahCount": 31
+ },
+ {
+  "number": 77,
+  "nameAr": "المرسلات",
+  "nameEn": "Al-Mursalat",
+  "meaningEn": "The Emissaries",
+  "type": "makki",
+  "ayahCount": 50
+ },
+ {
+  "number": 78,
+  "nameAr": "النبأ",
+  "nameEn": "An-Naba",
+  "meaningEn": "The Tidings",
+  "type": "makki",
+  "ayahCount": 40
+ },
+ {
+  "number": 79,
+  "nameAr": "النازعات",
+  "nameEn": "An-Nazi'at",
+  "meaningEn": "Those Who Drag Forth",
+  "type": "makki",
+  "ayahCount": 45
+ },
+ {
+  "number": 80,
+  "nameAr": "عبس",
+  "nameEn": "Abasa",
+  "meaningEn": "He Frowned",
+  "type": "makki",
+  "ayahCount": 42
+ },
+ {
+  "number": 81,
+  "nameAr": "التكوير",
+  "nameEn": "At-Takwir",
+  "meaningEn": "The Overthrowing",
+  "type": "makki",
+  "ayahCount": 29
+ },
+ {
+  "number": 82,
+  "nameAr": "الانفطار",
+  "nameEn": "Al-Infitar",
+  "meaningEn": "The Cleaving",
+  "type": "makki",
+  "ayahCount": 19
+ },
+ {
+  "number": 83,
+  "nameAr": "المطففين",
+  "nameEn": "Al-Mutaffifin",
+  "meaningEn": "The Defrauding",
+  "type": "makki",
+  "ayahCount": 36
+ },
+ {
+  "number": 84,
+  "nameAr": "الانشقاق",
+  "nameEn": "Al-Inshiqaq",
+  "meaningEn": "The Sundering",
+  "type": "makki",
+  "ayahCount": 25
+ },
+ {
+  "number": 85,
+  "nameAr": "البروج",
+  "nameEn": "Al-Buruj",
+  "meaningEn": "The Mansions of the Stars",
+  "type": "makki",
+  "ayahCount": 22
+ },
+ {
+  "number": 86,
+  "nameAr": "الطارق",
+  "nameEn": "At-Tariq",
+  "meaningEn": "The Nightcomer",
+  "type": "makki",
+  "ayahCount": 17
+ },
+ {
+  "number": 87,
+  "nameAr": "الأعلى",
+  "nameEn": "Al-A'la",
+  "meaningEn": "The Most High",
+  "type": "makki",
+  "ayahCount": 19
+ },
+ {
+  "number": 88,
+  "nameAr": "الغاشية",
+  "nameEn": "Al-Ghashiyah",
+  "meaningEn": "The Overwhelming",
+  "type": "makki",
+  "ayahCount": 26
+ },
+ {
+  "number": 89,
+  "nameAr": "الفجر",
+  "nameEn": "Al-Fajr",
+  "meaningEn": "The Dawn",
+  "type": "makki",
+  "ayahCount": 32
+ },
+ {
+  "number": 90,
+  "nameAr": "البلد",
+  "nameEn": "Al-Balad",
+  "meaningEn": "The City",
+  "type": "makki",
+  "ayahCount": 20
+ },
+ {
+  "number": 91,
+  "nameAr": "الشمس",
+  "nameEn": "Ash-Shams",
+  "meaningEn": "The Sun",
+  "type": "makki",
+  "ayahCount": 15
+ },
+ {
+  "number": 92,
+  "nameAr": "الليل",
+  "nameEn": "Al-Layl",
+  "meaningEn": "The Night",
+  "type": "makki",
+  "ayahCount": 21
+ },
+ {
+  "number": 93,
+  "nameAr": "الضحى",
+  "nameEn": "Ad-Duha",
+  "meaningEn": "The Morning Hours",
+  "type": "makki",
+  "ayahCount": 11
+ },
+ {
+  "number": 94,
+  "nameAr": "الشرح",
+  "nameEn": "Ash-Sharh",
+  "meaningEn": "The Relief",
+  "type": "makki",
+  "ayahCount": 8
+ },
+ {
+  "number": 95,
+  "nameAr": "التين",
+  "nameEn": "At-Tin",
+  "meaningEn": "The Fig",
+  "type": "makki",
+  "ayahCount": 8
+ },
+ {
+  "number": 96,
+  "nameAr": "العلق",
+  "nameEn": "Al-Alaq",
+  "meaningEn": "The Clot",
+  "type": "makki",
+  "ayahCount": 20
+ },
+ {
+  "number": 97,
+  "nameAr": "القدر",
+  "nameEn": "Al-Qadr",
+  "meaningEn": "The Power, Fate",
+  "type": "makki",
+  "ayahCount": 5
+ },
+ {
+  "number": 98,
+  "nameAr": "البينة",
+  "nameEn": "Al-Bayyinah",
+  "meaningEn": "The Clear Proof",
+  "type": "madani",
+  "ayahCount": 8
+ },
+ {
+  "number": 99,
+  "nameAr": "الزلزلة",
+  "nameEn": "Az-Zalzalah",
+  "meaningEn": "The Earthquake",
+  "type": "madani",
+  "ayahCount": 9
+ },
+ {
+  "number": 100,
+  "nameAr": "العاديات",
+  "nameEn": "Al-Adiyat",
+  "meaningEn": "The Courser",
+  "type": "makki",
+  "ayahCount": 11
+ },
+ {
+  "number": 101,
+  "nameAr": "القارعة",
+  "nameEn": "Al-Qari'ah",
+  "meaningEn": "The Calamity",
+  "type": "makki",
+  "ayahCount": 10
+ },
+ {
+  "number": 102,
+  "nameAr": "التكاثر",
+  "nameEn": "At-Takathur",
+  "meaningEn": "The Rivalry in World Increase",
+  "type": "makki",
+  "ayahCount": 8
+ },
+ {
+  "number": 103,
+  "nameAr": "العصر",
+  "nameEn": "Al-Asr",
+  "meaningEn": "The Declining Day",
+  "type": "makki",
+  "ayahCount": 3
+ },
+ {
+  "number": 104,
+  "nameAr": "الهمزة",
+  "nameEn": "Al-Humazah",
+  "meaningEn": "The Traducer",
+  "type": "makki",
+  "ayahCount": 9
+ },
+ {
+  "number": 105,
+  "nameAr": "الفيل",
+  "nameEn": "Al-Fil",
+  "meaningEn": "The Elephant",
+  "type": "makki",
+  "ayahCount": 5
+ },
+ {
+  "number": 106,
+  "nameAr": "قريش",
+  "nameEn": "Quraysh",
+  "meaningEn": "Quraysh",
+  "type": "makki",
+  "ayahCount": 5
+ },
+ {
+  "number": 107,
+  "nameAr": "الماعون",
+  "nameEn": "Al-Ma'un",
+  "meaningEn": "The Small Kindnesses",
+  "type": "makki",
+  "ayahCount": 6
+ },
+ {
+  "number": 108,
+  "nameAr": "الكوثر",
+  "nameEn": "Al-Kawthar",
+  "meaningEn": "The Abundance",
+  "type": "makki",
+  "ayahCount": 3
+ },
+ {
+  "number": 109,
+  "nameAr": "الكافرون",
+  "nameEn": "Al-Kafirun",
+  "meaningEn": "The Disbelievers",
+  "type": "makki",
+  "ayahCount": 6
+ },
+ {
+  "number": 110,
+  "nameAr": "النصر",
+  "nameEn": "An-Nasr",
+  "meaningEn": "The Divine Support",
+  "type": "madani",
+  "ayahCount": 3
+ },
+ {
+  "number": 111,
+  "nameAr": "المسد",
+  "nameEn": "Al-Masad",
+  "meaningEn": "The Palm Fibre",
+  "type": "makki",
+  "ayahCount": 5
+ },
+ {
+  "number": 112,
+  "nameAr": "الإخلاص",
+  "nameEn": "Al-Ikhlas",
+  "meaningEn": "Sincerity",
+  "type": "makki",
+  "ayahCount": 4
+ },
+ {
+  "number": 113,
+  "nameAr": "الفلق",
+  "nameEn": "Al-Falaq",
+  "meaningEn": "The Daybreak",
+  "type": "makki",
+  "ayahCount": 5
+ },
+ {
+  "number": 114,
+  "nameAr": "الناس",
+  "nameEn": "An-Nas",
+  "meaningEn": "Mankind",
+  "type": "makki",
+  "ayahCount": 6
+ }
+]

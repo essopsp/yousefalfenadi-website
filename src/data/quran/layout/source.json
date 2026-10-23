@@ -1,0 +1,12 @@
+{
+  "layout": "KFGQPC Qaloon 'an Nafi' v10 (mushaf pages)",
+  "publisher": "King Fahd Glorious Quran Printing Complex (KFGQPC)",
+  "mirror": "https://github.com/thetruetruth/quran-data-kfgqpc",
+  "sourceFile": "qaloon/data/QaloonData_v10.json",
+  "snapshot": "QaloonData_v10.json",
+  "bookPages": 604,
+  "linesPerPage": 15,
+  "totalAyah": 6214,
+  "sha256": "18465c40ebeec40a92eb98745c9b89796ac6e31f6e93988883dfb6602faaea95",
+  "note": "ترقيم الصفحات والأسطر لكل آية؛ بيانات كلمات كل سطر غير متاحة لرواية قالون."
+}

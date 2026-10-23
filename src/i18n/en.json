@@ -1,0 +1,138 @@
+{
+  "site": {
+    "name": "Nour Eddine Al-Meslati",
+    "tagline": "Reciter of the Holy Quran",
+    "riwayah": "Qaloon 'an Nafi' narration",
+    "title": "Nour Eddine Al-Meslati — Quran Recitations in Qaloon Narration",
+    "description": "Listen to the complete Quran recitation by Sheikh Nour Eddine Al-Meslati in Qaloon 'an Nafi' narration. 114 surahs in high quality, no ads, no sign-up.",
+    "langName": "English"
+  },
+  "nav": {
+    "surahs": "Recitations",
+    "about": "About",
+    "home": "Home",
+    "switchTo": "العربية"
+  },
+  "home": {
+    "intro": "The complete Quran recitation in Qaloon 'an Nafi' narration, recited calmly and precisely. Listen from any device — no ads, no sign-up.",
+    "listenNow": "Listen now",
+    "browseSurahs": "Browse surahs",
+    "aboutTitle": "About the Sheikh",
+    "aboutMore": "Read more",
+    "featuredTitle": "Featured recitations",
+    "featuredSubtitle": "Start here",
+    "shareTitle": "Share the website",
+    "shareText": "The complete Quran recitation by Sheikh Nour Eddine Al-Meslati in Qaloon narration"
+  },
+  "surahs": {
+    "title": "Recitations",
+    "subtitle": "The complete khatmah — 114 surahs in Qaloon 'an Nafi' narration",
+    "searchPlaceholder": "Search by surah name or number…",
+    "searchLabel": "Search surahs",
+    "noResults": "No matching results",
+    "clearSearch": "Clear search",
+    "makki": "Meccan",
+    "madani": "Medinan",
+    "ayahs": "verses",
+    "surah": "Surah",
+    "resultsCount": "surahs",
+    "nowPlaying": "Now playing",
+    "playSurah": "Play surah"
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "next": "Next surah",
+    "previous": "Previous surah",
+    "skipForward": "Skip forward 10 seconds",
+    "skipBackward": "Skip back 10 seconds",
+    "speed": "Playback speed",
+    "download": "Download surah",
+    "downloading": "Downloading…",
+    "downloadError": "Download failed — try again",
+    "share": "Share surah",
+    "linkCopied": "Link copied",
+    "close": "Close",
+    "resumeTitle": "Continue listening",
+    "resumeText": "You stopped at {surah} — minute {time}",
+    "resumeAction": "Continue",
+    "dismiss": "Later",
+    "playing": "Now playing",
+    "chooseSurah": "Pick a surah to start listening",
+    "playError": "Playback failed — check your connection",
+    "seek": "Seek bar",
+    "volume": "Volume"
+  },
+  "surahPage": {
+    "listenFull": "Listen to the full surah",
+    "duration": "Duration",
+    "downloadMp3": "Download MP3",
+    "shareBtn": "Share",
+    "allSurahs": "All recitations"
+  },
+  "about": {
+    "title": "About the Sheikh",
+    "placeholder": "Sheikh Nour Eddine Al-Meslati is a Libyan reciter who recites the Holy Quran in the Qaloon 'an Nafi' narration — the narration used in Libya and long established in Msallata, the city his name is attributed to.",
+    "bio": [
+      "Sheikh Nour Eddine Al-Meslati is a Quran reciter from Libya. He is attributed to the city of Msallata, known for the memorisation of the Quran and for reciting it in the Qaloon 'an Nafi' narration.",
+      "He recites the entire Quran in the Qaloon 'an Nafi' narration — the reading of Imam Qaloon from Imam Nafi' of Madinah — which is the narration adopted in Libyan mushafs and used in its mosques and Quran schools.",
+      "This khatmah includes all 114 surahs, offered here for listening and free download, retaining the original recording quality without any modification.",
+      "To follow new recitations, you can visit the Sheikh's channel on Telegram."
+    ],
+    "contactTitle": "Contact",
+    "contactText": "To follow new recitations and browse the complete khatmah, please visit the Sheikh's Telegram channel:",
+    "links": [
+      {
+        "label": "Telegram",
+        "href": "https://t.me/Nouraldinrecitation",
+        "handle": "The complete khatmah of Sheikh Nour Eddine Al-Meslati"
+      }
+    ]
+  },
+  "display": {
+    "title": "Display settings",
+    "theme": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "textSize": "Text size",
+    "sizeBase": "Normal",
+    "sizeLarge": "Large",
+    "sizeXLarge": "Larger",
+    "layout": "Layout",
+    "layoutList": "List",
+    "layoutMushaf": "Mushaf",
+    "effect": "Reading effect",
+    "effectFade": "Faded",
+    "effectReveal": "Reveal",
+    "layoutPages": "Mushaf (pages)"
+  },
+  "reader": {
+    "title": "Surah text",
+    "toggle": "Show text",
+    "note": "Mushaf text in the Qaloon 'an Nafi' narration (Arabic).",
+    "attributionPrefix": "Text: Qaloon mushaf edition — Quranpedia / KFGQPC, licensed CC BY-SA 4.0.",
+    "source": "Source",
+    "jump": "Jump to ayah",
+    "page": "Page",
+    "of": "of",
+    "juz": "Juz",
+    "prevPage": "Previous page",
+    "nextPage": "Next page",
+    "pagesAttributionPrefix": "Mushaf pages and typeface: Qaloon mushaf — King Fahd Glorious Quran Printing Complex (KFGQPC), v10.",
+    "pagesSource": "Source"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "riwayahLine": "The complete khatmah in Qaloon 'an Nafi' narration"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
+  },
+  "meta": {
+    "surahTitle": "Surah {surah}",
+    "surahDescription": "Listen to Surah {surah} recited by Sheikh Nour Eddine Al-Meslati in Qaloon 'an Nafi' narration — {ayahs} verses.",
+    "surahsTitle": "Recitations — 114 surahs",
+    "aboutTitle": "About Sheikh Nour Eddine Al-Meslati"
+  }
+}

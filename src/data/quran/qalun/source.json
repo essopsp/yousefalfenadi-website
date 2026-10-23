@@ -1,0 +1,11 @@
+{
+  "edition": "Qaloon 'an Nafi' (قالون عن نافع)",
+  "publisher": "Quranpedia.net KFGQPC edition, via risan/quran-json",
+  "mirror": "https://github.com/iptvchecker/content-quran-json",
+  "sourceUrl": "https://quran-json.risanb.com/text/qalun/quran.json",
+  "snapshot": "qalun-2026-10-08.json",
+  "license": "CC-BY-SA-4.0",
+  "totalAyah": 6214,
+  "surahs": 114,
+  "sha256": "7dd55cde59e49863e9862e1530088c0247445937e11da4588298813764c4d71b"
+}

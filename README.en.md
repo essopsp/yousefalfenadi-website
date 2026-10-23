@@ -1,10 +1,14 @@
-# Personal website of reciter Yousef Al-Fenadi
+# Website of Sheikh Yousef Al-Fenadi
 
 > النسخة العربية: [README.md](README.md)
 
 A fully static site for the complete Quran recitations — **114 surahs in the Qaloon 'an Nafi narration** — with a persistent audio player and continuous mushaf-style text. Arabic (default) and English.
 
-> The khatmah used here is the **Ramadan 1447 / 2026 tarawih** set from the Sheikh's Telegram channel. Word timings have not been generated for this khatmah yet, so the text displays without live tracking until the timing pipeline is run.
+## Current status
+
+- **Khatmah:** all 114 surahs from the **Ramadan 1447 / 2026 tarawih** set (Telegram channel messages 140–256), totalling **21 h 18 m** at 320 kbps.
+- **Timings:** not generated for this khatmah yet, so word tracking, the recitation colour effects and time seeking are disabled until the pipeline is run.
+- **Deployment:** the Cloudflare Pages project, R2 bucket and domain do not exist yet; the links below are placeholders.
 
 - **Live:** https://yousefalfenadi-website.pages.dev · English version: `/en/`
 - **Full specification:** `PRD.md` (Arabic)
@@ -15,12 +19,12 @@ A fully static site for the complete Quran recitations — **114 surahs in the Q
 - **Sticky audio player** at the bottom of the screen: keeps playing while navigating between pages, play/pause, previous/next, ±10s, speed 0.75×–2×, auto-advance to the next surah, **Media Session** support (lock screen and notifications), and resume of the last position from `localStorage`.
 - **The site follows the recitation**: starting a surah from the home page or the surah list opens its page automatically, and so does the auto-advance to the next surah once a recitation ends — audio keeps playing across navigations, and browsing other pages is never interrupted.
 - **Surah text in the Qaloon narration** (6,214 ayat) inlined into the static HTML — readable with JavaScript disabled and indexable by search engines.
-- **Two layouts**: “List” (one ayah per line with its number rosette) and “Mushaf” (continuous justified text with `۝` ayah separators).
-- **Third layout, “Mushaf (pages)”**: real KFGQPC Qaloon page numbers (604 pages, 15 lines each) in the mushaf typeface, with the juz and surah name in the page header and the page number in the footer, automatic page turns that follow the recitation, previous/next buttons, and the last page of each surah remembered (automatic playback never overwrites the reader’s place).
+- **Three layouts**: “List” (one ayah per line with its number rosette), “Mushaf” (continuous justified text with `۝` ayah separators), and “Mushaf (pages)”.
+- **“Mushaf (pages)” layout**: real KFGQPC Qaloon page numbers (604 pages, 15 lines each) in the mushaf typeface, with the juz and surah name in the page header and the page number in the footer, automatic page turns that follow the recitation, previous/next buttons, and the last page of each surah remembered (automatic playback never overwrites the reader’s place).
 - **Mushaf size in the pages layout**: the “text size” setting scales the whole page (100% / 115% / 130%) — text and lines together — without ever changing the number of lines per page (always 15); the space left for the page is measured from the real header and player bar instead of a fixed guess. On phones the page becomes wider than the screen and is panned horizontally.
 - **Ayah number rosette**: the KFGQPC typeface draws it as a single rosette carrying the number (as in the printed mushaf) in all three layouts, with no extra empty rosette.
-- **Two recitation effects**: “Faded” (words gradually take on full colour as they are recited) or “Reveal” (recited words appear gradually).
-- **Current-word tracking** at word precision, with auto-scroll that keeps the ayah above the player bar; clicking any word or ayah starts playback from that position.
+- **Two recitation effects (require timings)**: “Faded” (words gradually take on full colour as they are recited) or “Reveal” (recited words appear gradually).
+- **Current-word tracking (requires timings)** at word precision, with auto-scroll that keeps the ayah above the player bar; clicking any word starts playback from that position.
 - **Display settings** persisted locally: theme (light/dark/system), text size, layout and reading effect — applied before paint, with no flash.
 - Per-surah share and direct download links, plus Open Graph, `Schema.org` and a sitemap.
 
@@ -85,15 +89,20 @@ public/fonts/           Self-hosted fonts
 | `src/data/recitations.json` | Maps each surah to its audio file and duration | small |
 | `src/data/quran/qalun/NNN.json` | Mushaf text in the Qaloon narration: `{a, hafs[], t}` per ayah | 1.8 MB |
 | `src/data/quran/timings/` | Ayah and word timings — **not generated for this khatmah yet** | — |
+| `src/data/quran/layout/NNN.json` | Qaloon mushaf page structure: `{surah, bookPages, linesPerPage, from, to, pages[{p, j, items[]}]}` | 564 KB |
+| `src/data/quran/layout/source.json` | Source description and SHA-256 fingerprint of the downloaded KFGQPC file | small |
 
 ### Refreshing the data
 
 ```bash
 node scripts/build-surahs.mjs        # builds surahs.json (fixed reference table)
 node scripts/build-quran-text.mjs    # downloads the Qaloon text, verifies SHA-256, writes quran/qalun/
+node scripts/build-qaloon-layout.mjs # downloads the KFGQPC page layout, verifies its hash, writes quran/layout/
 ```
 
 The text comes from [iptvchecker/content-quran-json](https://github.com/iptvchecker/content-quran-json) (the Quranpedia / KFGQPC edition) — **6,214 ayat** in the Qaloon narration versus 6,236 in Hafs, differing across 50 surahs. `uthmani_qaloon` from quran.com is deliberately not used, because it follows Hafs numbering.
+
+The page layout comes from the **KFGQPC Qaloon v10** file (`quran-data-kfgqpc`) — pinned by SHA-256 inside the script; the build verifies that every surah is reconstructed from its words with no loss or addition before writing. Page items are either a full ayah `{k:"a",i}`, part of an ayah crossing a page boundary `{f,t}`, neighbouring surah text for context `{k:"x"}` (not clickable), a surah heading `{k:"s"}`, or a basmalah `{k:"b"}`.
 
 **Adding a new recitation** requires no code changes: drop `NNN.mp3` into the `audio/` folder of the R2 bucket and add one line to `recitations.json` (`{"surah": N, "file": "NNN.mp3", "duration": 0}` — duration in seconds; `0` simply hides the duration).
 
@@ -127,6 +136,13 @@ Audio files are **never committed to Git** (`*.mp3`, `audio-raw/` and `audio-fin
 
 Every push to `main` runs `.github/workflows/deploy.yml`: `npm ci` → `npm run typecheck` → `npm run build` → upload `out/` to Cloudflare Pages via `wrangler-action`. Required secrets: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. The audio base URL is passed as an environment variable in the workflow.
 
+### Before the first deploy
+
+1. Choose the domain and update `SITE_URL` in `src/lib/seo.ts` plus the links in this file.
+2. Create the R2 bucket (proposed: `yousefalfenadi-audio`), upload `audio-final/*.mp3` under the `audio/` prefix, attach a public domain, and update `NEXT_PUBLIC_AUDIO_BASE_URL`.
+3. Add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` to the repository secrets.
+4. Run the timing pipeline above once the audio is public.
+
 ## Accessibility and performance
 
 - The text is always server-rendered, and live tracking only toggles CSS classes on the two words that changed, driven by `requestAnimationFrame` (no re-render).
@@ -136,6 +152,7 @@ Every push to `main` runs `.github/workflows/deploy.yml`: `npm ci` → `npm run 
 ## Attribution and licensing
 
 - **Mushaf text:** Qaloon 'an Nafi mushaf edition — Quranpedia / KFGQPC via `iptvchecker/content-quran-json`, licensed **CC BY-SA 4.0** (attribution is shown inside the website).
+- **Page layout:** KFGQPC Qaloon v10 page data from [thetruetruth/quran-data-kfgqpc](https://github.com/thetruetruth/quran-data-kfgqpc) — page numbers, boundaries and juz numbers match the printed mushaf. **Accuracy limit:** line breaks inside a page may differ by a word or two, because detailed line-break data is available only for Hafs numbering.
 - **Fonts:** Amiri Quran · Noto Naskh Arabic · Reem Kufi · Inter — all under the SIL Open Font License, self-hosted.
 - **Mushaf typeface:** KFGQPC Qaloon 10 (WOFF2) — hosted as is, with **no modification or subsetting**, under the King Fahd Glorious Quran Printing Complex licence. It is used for the text in the “Mushaf (pages)” layout and for the ayah number rosette in all three layouts.
 - **Recitations:** all rights to the recorded recitations belong to Sheikh Yousef Al-Fenadi; they may not be reused without his permission.

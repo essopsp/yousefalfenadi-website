@@ -38,7 +38,7 @@ export function pageMetadata({
       title,
       description,
       url: canonical,
-      siteName: "نور الدين المسلاتي",
+      siteName: "يوسف الفنادي",
       locale: locale === "ar" ? "ar_LY" : "en_US",
       alternateLocale: locale === "ar" ? "en_US" : "ar_LY",
       type: type === "music.song" ? "music.song" : "website",

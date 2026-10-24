@@ -302,7 +302,7 @@ function updateMediaSession(surahNumber: number | null, rate: number) {
   if (!surah) return;
   ms.metadata = new MediaMetadata({
     title: `سورة ${surah.nameAr}`,
-    artist: "الشيخ نور الدين المسلاتي",
+    artist: "الشيخ يوسف الفنادي",
     album: "رواية قالون عن نافع",
     artwork: [
       { src: "/assets/images/hero.jpg", sizes: "512x512", type: "image/jpeg" },

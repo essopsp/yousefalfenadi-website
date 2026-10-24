@@ -38,7 +38,7 @@ export function HomePageView({
       {
         "@type": "Person",
         "@id": `${SITE_URL}/#person`,
-        name: locale === "ar" ? "نور الدين المسلاتي" : "Nour Eddine Al-Meslati",
+        name: locale === "ar" ? "يوسف الفنادي" : "Nour Eddine Al-Meslati",
         jobTitle: locale === "ar" ? "قارئ القرآن الكريم" : "Quran reciter",
         url: SITE_URL,
       },

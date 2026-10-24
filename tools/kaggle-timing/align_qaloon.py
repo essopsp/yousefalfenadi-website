@@ -25,10 +25,10 @@ from pathlib import Path
 
 # ---------------------------------------------------------------- config
 SURAHS = list(range(1, 115))  # full mushaf; use [18] to test a single surah
-AUDIO_BASE = "https://audio.noureddinealmselati.com.ly/audio"
+AUDIO_BASE = "https://audio.yousefalfenadi.com.ly/audio"
 TEXT_BASE = (
     "https://raw.githubusercontent.com/essopsp/"
-    "noureddinealmselati-website/main/src/data/quran/qalun"
+    "yousefalfenadi-website/main/src/data/quran/qalun"
 )
 MODEL_SIZE = "large-v3"
 LOW_SCORE = 0.60

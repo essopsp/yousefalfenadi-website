@@ -4,7 +4,7 @@
 
 موقع ثابت (Static) للتلاوات القرآنية كاملة — **١١٤ سورة برواية قالون عن نافع** — مع مشغّل صوتي مستمر، ونص مصحفي متصل، وتتبّع الكلمة الجارية أثناء التلاوة. عربي (افتراضي) وإنجليزي.
 
-- **الموقع:** https://noureddinealmselati.com.ly · النسخة الإنجليزية: `/en/`
+- **الموقع:** https://yousefalfenadi.com.ly · النسخة الإنجليزية: `/en/`
 - **المواصفات الكاملة:** `PRD.md`
 
 ## الميزات
@@ -51,7 +51,7 @@ npm run typecheck  # tsc --noEmit
 
 | المتغير | الوصف |
 |---|---|
-| `NEXT_PUBLIC_AUDIO_BASE_URL` | الرابط الأساسي لملفات الصوت. في الإنتاج: `https://audio.noureddinealmselati.com.ly/audio`، وفي التطوير الافتراضي `/assets/audio`. |
+| `NEXT_PUBLIC_AUDIO_BASE_URL` | الرابط الأساسي لملفات الصوت. في الإنتاج: `https://audio.yousefalfenadi.com.ly/audio`، وفي التطوير الافتراضي `/assets/audio`. |
 
 `src/data/recitations.json` يحفظ **اسم الملف فقط** (`001.mp3`)، والرابط الكامل يُركَّب وقت التشغيل في `src/lib/data.ts` — أي يمكن نقل الصوت لمصدر آخر بتغيير متغير واحد.
 

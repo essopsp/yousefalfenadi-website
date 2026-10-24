@@ -4,7 +4,7 @@
 
 A fully static site for the complete Quran recitations — **114 surahs in the Qaloon 'an Nafi narration** — with a persistent audio player, a continuous mushaf-style text, and word-by-word tracking during recitation. Arabic (default) and English.
 
-- **Live:** https://noureddinealmselati.com.ly · English version: `/en/`
+- **Live:** https://yousefalfenadi.com.ly · English version: `/en/`
 - **Full specification:** `PRD.md` (Arabic)
 
 ## Features
@@ -51,7 +51,7 @@ npm run typecheck  # tsc --noEmit
 
 | Variable | Description |
 |---|---|
-| `NEXT_PUBLIC_AUDIO_BASE_URL` | Base URL for audio files. In production: `https://audio.noureddinealmselati.com.ly/audio`; local default: `/assets/audio`. |
+| `NEXT_PUBLIC_AUDIO_BASE_URL` | Base URL for audio files. In production: `https://audio.yousefalfenadi.com.ly/audio`; local default: `/assets/audio`. |
 
 `src/data/recitations.json` stores **only the file name** (`001.mp3`); the full URL is assembled at runtime in `src/lib/data.ts`, so the whole audio source can be moved by changing a single variable.
 

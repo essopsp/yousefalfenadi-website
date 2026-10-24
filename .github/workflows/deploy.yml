@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      NEXT_PUBLIC_AUDIO_BASE_URL: https://audio.noureddinealmselati.com.ly/audio
+      NEXT_PUBLIC_AUDIO_BASE_URL: https://audio.yousefalfenadi.com.ly/audio
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Checkout
@@ -43,4 +43,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy out --project-name=noureddinealmselati-website --branch=main
+          command: pages deploy out --project-name=yousefalfenadi-website --branch=main

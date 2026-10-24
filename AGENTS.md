@@ -1,6 +1,6 @@
 # YousefAlFenadi — project brief for agents
 
-Same static Quran website as `essopsp/noureddinealmselati-website`, built for a
+Same static Quran website as `essopsp/yousefalfenadi-website`, built for a
 different reciter: **Sheikh Yousef Al-Fenadi (الشيخ يوسف الفنادي)**.
 
 ## Source of recitations

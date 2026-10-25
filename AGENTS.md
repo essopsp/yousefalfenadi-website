@@ -29,24 +29,29 @@ based on the same codebase as `essopsp/noureddinealmselati-website`.
 - Old reciter timings were removed from `src/data/quran/timings/` because they
   do not match the new audio. The reader degrades gracefully (no highlighting,
   no word seeking) until new timings are generated.
-- `SITE_URL` is the placeholder `https://yousefalfenadi-website.pages.dev`;
-  replace it once the custom domain is chosen/registered.
-- No Cloudflare Pages project, R2 bucket or domain exists for this sheikh yet.
+- `SITE_URL` is now `https://yousefalfenadi.com.ly`; the domain is on
+  Cloudflare but the root/`www` DNS records are still pending.
+- R2 bucket `yousefalfenadi` contains all 114 `audio/NNN.mp3` objects (320 kbps,
+  immutable cache, Range supported). Public custom domain:
+  `https://audio.yousefalfenadi.com.ly/audio`.
+- Pages project `yousefalfenadi-website` is deployed; preview:
+  `https://yousefalfenadi-website.pages.dev`. Custom domains
+  `yousefalfenadi.com.ly` and `www.yousefalfenadi.com.ly` were added to the
+  project and are waiting for DNS.
+- Kaggle kernel `mosabshlimboshlimbo/yousefalfenadi-qaloon-timing` was pushed
+  with the live R2 URLs and is running (T4, 8 h timeout).
 
 ## Remaining work
 
-1. Register/confirm the domain, then update `src/lib/seo.ts` (`SITE_URL`) and
-   the README links.
-2. Create the R2 bucket (`yousefalfenadi-audio`), upload the 114 `NNN.mp3`
-   files, and set the R2 custom domain. Update `NEXT_PUBLIC_AUDIO_BASE_URL` in
-   `.github/workflows/deploy.yml`.
-3. Generate word timings for this khatmah with `tools/kaggle-timing/`
-   (`align_qaloon.py` + `emit_word_timings.py`); update `AUDIO_BASE` there to
-   the new R2 URL first.
-4. Add `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` to the repo, create the
-   Pages project `yousefalfenadi-website`, deploy, then re-create the
-   regression harnesses (pages-test, pages-matrix, pages-sweep, nav-test,
-   pages-fix-test) against the new site.
+1. Add the root and `www` CNAME records (`@`/`www` →
+   `yousefalfenadi-website.pages.dev`, proxied) to activate the custom domain.
+2. Add `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` to the repo secrets so
+   GitHub Actions can deploy on push.
+3. When the Kaggle kernel finishes: download the outputs, run
+   `emit_word_timings.py`, copy `NNN.json`/`words-NNN.json` into
+   `src/data/quran/timings/`, rebuild and redeploy.
+4. Re-create the regression harnesses (pages-test, pages-matrix, pages-sweep,
+   nav-test, pages-fix-test) against the new site.
 5. Remove/refresh the placeholder social/OG copy if the Sheikh supplies a bio
    or a higher-resolution portrait.
 

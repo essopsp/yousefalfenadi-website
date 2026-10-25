@@ -8,9 +8,9 @@ A fully static site for the complete Quran recitations — **114 surahs in the Q
 
 - **Khatmah:** all 114 surahs from the **Ramadan 1447 / 2026 tarawih** set (Telegram channel messages 140–256), totalling **21 h 18 m** at 320 kbps.
 - **Timings:** not generated for this khatmah yet, so word tracking, the recitation colour effects and time seeking are disabled until the pipeline is run.
-- **Deployment:** the Cloudflare Pages project, R2 bucket and domain do not exist yet; the links below are placeholders.
+- **Deployment:** the site is live on Cloudflare Pages and the audio is live on R2 at `audio.yousefalfenadi.com.ly`; only the root-domain DNS records are still pending.
 
-- **Live:** https://yousefalfenadi-website.pages.dev · English version: `/en/`
+- **Live:** https://yousefalfenadi.com.ly (DNS pending) · Preview: https://yousefalfenadi-website.pages.dev · English version: `/en/`
 - **Full specification:** `PRD.md` (Arabic)
 
 ## Features
@@ -138,10 +138,10 @@ Every push to `main` runs `.github/workflows/deploy.yml`: `npm ci` → `npm run 
 
 ### Before the first deploy
 
-1. Choose the domain and update `SITE_URL` in `src/lib/seo.ts` plus the links in this file.
-2. Create the R2 bucket (proposed: `yousefalfenadi-audio`), upload `audio-final/*.mp3` under the `audio/` prefix, attach a public domain, and update `NEXT_PUBLIC_AUDIO_BASE_URL`.
-3. Add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` to the repository secrets.
-4. Run the timing pipeline above once the audio is public.
+1. Add `CNAME` records for the root (`@`) and `www` pointing to `yousefalfenadi-website.pages.dev` in Cloudflare DNS (currently pending).
+2. Add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` to the repository secrets.
+3. Once the Kaggle kernel finishes: download its outputs, run `emit_word_timings.py`, then rebuild and redeploy.
+4. Re-create the regression harnesses (pages-test, pages-matrix, pages-sweep, nav-test, pages-fix-test) against the new site.
 
 ## Accessibility and performance
 

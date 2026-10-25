@@ -29,30 +29,31 @@ based on the same codebase as `essopsp/noureddinealmselati-website`.
 - Old reciter timings were removed from `src/data/quran/timings/` because they
   do not match the new audio. The reader degrades gracefully (no highlighting,
   no word seeking) until new timings are generated.
-- `SITE_URL` is now `https://yousefalfenadi.com.ly`; the domain is on
-  Cloudflare but the root/`www` DNS records are still pending.
+- `SITE_URL` is `https://yousefalfenadi.com.ly`; root/`www` CNAMEs point to
+  `yousefalfenadi-website.pages.dev` (proxied) and both custom domains are
+  active.
 - R2 bucket `yousefalfenadi` contains all 114 `audio/NNN.mp3` objects (320 kbps,
   immutable cache, Range supported). Public custom domain:
   `https://audio.yousefalfenadi.com.ly/audio`.
-- Pages project `yousefalfenadi-website` is deployed; preview:
-  `https://yousefalfenadi-website.pages.dev`. Custom domains
-  `yousefalfenadi.com.ly` and `www.yousefalfenadi.com.ly` were added to the
-  project and are waiting for DNS.
-- Kaggle kernel `mosabshlimboshlimbo/yousefalfenadi-qaloon-timing` was pushed
-  with the live R2 URLs and is running (T4, 8 h timeout).
+- Pages project `yousefalfenadi-website` is live at
+  `https://yousefalfenadi.com.ly`; preview:
+  `https://yousefalfenadi-website.pages.dev`.
+- GitHub Actions deploy works: `CLOUDFLARE_API_TOKEN` and
+  `CLOUDFLARE_ACCOUNT_ID` are repo secrets, and `main` is pushed to
+  `origin` (GitHub).
+- Kaggle kernel `mosabshlimboshlimbo/yousefalfenadi-qaloon-timing` is running
+  with the live R2 URLs (T4, 8 h timeout). Local CLI:
+  `/home/shlimbo/.venvs/kaggle/bin/kaggle`; export
+  `KAGGLE_API_TOKEN="$(cat ~/.kaggle/access_token)"` before use.
 
 ## Remaining work
 
-1. Add the root and `www` CNAME records (`@`/`www` →
-   `yousefalfenadi-website.pages.dev`, proxied) to activate the custom domain.
-2. Add `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` to the repo secrets so
-   GitHub Actions can deploy on push.
-3. When the Kaggle kernel finishes: download the outputs, run
+1. When the Kaggle kernel finishes: download the outputs, run
    `emit_word_timings.py`, copy `NNN.json`/`words-NNN.json` into
    `src/data/quran/timings/`, rebuild and redeploy.
-4. Re-create the regression harnesses (pages-test, pages-matrix, pages-sweep,
+2. Re-create the regression harnesses (pages-test, pages-matrix, pages-sweep,
    nav-test, pages-fix-test) against the new site.
-5. Remove/refresh the placeholder social/OG copy if the Sheikh supplies a bio
+3. Remove/refresh the placeholder social/OG copy if the Sheikh supplies a bio
    or a higher-resolution portrait.
 
 ## Environment / conventions

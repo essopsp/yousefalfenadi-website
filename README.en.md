@@ -8,9 +8,9 @@ A fully static site for the complete Quran recitations — **114 surahs in the Q
 
 - **Khatmah:** all 114 surahs from the **Ramadan 1447 / 2026 tarawih** set (Telegram channel messages 140–256), totalling **21 h 18 m** at 320 kbps.
 - **Timings:** not generated for this khatmah yet, so word tracking, the recitation colour effects and time seeking are disabled until the pipeline is run.
-- **Deployment:** the site is live on Cloudflare Pages and the audio is live on R2 at `audio.yousefalfenadi.com.ly`; only the root-domain DNS records are still pending.
+- **Deployment:** the site is live on Cloudflare Pages at `yousefalfenadi.com.ly`, and the audio is live on R2 at `audio.yousefalfenadi.com.ly`.
 
-- **Live:** https://yousefalfenadi.com.ly (DNS pending) · Preview: https://yousefalfenadi-website.pages.dev · English version: `/en/`
+- **Live:** https://yousefalfenadi.com.ly · Preview: https://yousefalfenadi-website.pages.dev · English version: `/en/`
 - **Full specification:** `PRD.md` (Arabic)
 
 ## Features
@@ -136,12 +136,11 @@ Audio files are **never committed to Git** (`*.mp3`, `audio-raw/` and `audio-fin
 
 Every push to `main` runs `.github/workflows/deploy.yml`: `npm ci` → `npm run typecheck` → `npm run build` → upload `out/` to Cloudflare Pages via `wrangler-action`. Required secrets: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. The audio base URL is passed as an environment variable in the workflow.
 
-### Before the first deploy
+### Remaining after launch
 
-1. Add `CNAME` records for the root (`@`) and `www` pointing to `yousefalfenadi-website.pages.dev` in Cloudflare DNS (currently pending).
-2. Add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` to the repository secrets.
-3. Once the Kaggle kernel finishes: download its outputs, run `emit_word_timings.py`, then rebuild and redeploy.
-4. Re-create the regression harnesses (pages-test, pages-matrix, pages-sweep, nav-test, pages-fix-test) against the new site.
+1. Once the Kaggle kernel finishes: download its outputs, run `emit_word_timings.py`, then rebuild and redeploy.
+2. Re-create the regression harnesses (pages-test, pages-matrix, pages-sweep, nav-test, pages-fix-test) against the new site.
+3. Refresh the share/Open Graph copy if the Sheikh supplies a bio or a higher-resolution portrait.
 
 ## Accessibility and performance
 

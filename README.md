@@ -8,9 +8,9 @@
 
 - **الختمة:** ١١٤ سورة كاملة من **تراويح رمضان ١٤٤٧ هـ / ٢٠٢٦ م** (رسائل قناة تيليجرام ١٤٠–٢٥٦)، بمجموع **٢١ ساعة و١٨ دقيقة**، بجودة ٣٢٠ kbps.
 - **التوقيتات:** لم تُولَّد بعد لهذه الختمة؛ لذلك تتبّع الكلمات والتلوين التدريجي والقفز الزمني معطّلة حتى تشغيل خط الأنابيب.
-- **النشر:** الموقع منشور على Cloudflare Pages، والصوت مرفوع على R2 ويعمل عبر `audio.yousefalfenadi.com.ly`؛ يتبقّى ربط الدومين الرئيسي بسجلات DNS.
+- **النشر:** الموقع منشور على Cloudflare Pages والدومين `yousefalfenadi.com.ly` يعمل، والصوت مرفوع على R2 عبر `audio.yousefalfenadi.com.ly`.
 
-- **الموقع:** https://yousefalfenadi.com.ly (بانتظار DNS) · معاينة: https://yousefalfenadi-website.pages.dev · النسخة الإنجليزية: `/en/`
+- **الموقع:** https://yousefalfenadi.com.ly · معاينة: https://yousefalfenadi-website.pages.dev · النسخة الإنجليزية: `/en/`
 - **المواصفات الكاملة:** `PRD.md`
 
 ## الميزات
@@ -136,12 +136,11 @@ python3 tools/kaggle-timing/emit_word_timings.py /tmp/kaggle-out
 
 كل دفع إلى `main` يشغّل `.github/workflows/deploy.yml`: `npm ci` ← `npm run typecheck` ← `npm run build` ← رفع `out/` إلى Cloudflare Pages عبر `wrangler-action`. الأسرار المطلوبة: `CLOUDFLARE_API_TOKEN` و`CLOUDFLARE_ACCOUNT_ID`. الرابط الأساسي للصوت يُمرَّر كمتغير بيئة في سير العمل.
 
-### ما تبقّى قبل أول نشر
+### ما تبقّى بعد الإطلاق
 
-1. إضافة سجلي `CNAME` للجذر `@` و`www` نحو `yousefalfenadi-website.pages.dev` في Cloudflare DNS (الحالة الحالية: pending).
-2. إضافة `CLOUDFLARE_API_TOKEN` و`CLOUDFLARE_ACCOUNT_ID` إلى أسرار المستودع.
-3. بعد اكتمال نواة Kaggle: تنزيل المخرجات وتشغيل `emit_word_timings.py`، ثم إعادة البناء والنشر.
-4. إعادة إنشاء اختبارات الانحدار (pages-test، pages-matrix، pages-sweep، nav-test، pages-fix-test) على الموقع الجديد.
+1. بعد اكتمال نواة Kaggle: تنزيل المخرجات وتشغيل `emit_word_timings.py`، ثم إعادة البناء والنشر.
+2. إعادة إنشاء اختبارات الانحدار (pages-test، pages-matrix، pages-sweep، nav-test، pages-fix-test) على الموقع الجديد.
+3. تحديث نص المشاركة وOpen Graph إذا وفّر الشيخ سيرة أو صورة شخصية بدقة أعلى.
 
 ## الوصول والأداء
 

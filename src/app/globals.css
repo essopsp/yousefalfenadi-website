@@ -1,43 +1,44 @@
+
 @import "tailwindcss";
 @import "./fonts.css";
 
 :root {
-  --bg: #f8f3e7;
-  --surface: #f0e8d5;
-  --ink: #24201a;
-  --muted: #6e6452;
-  --accent: #8f6226;
-  --accent-soft: #b98a47;
-  --line: #e3d9c2;
-  --overlay: rgb(36 32 26 / 0.55);
+  --bg: #F1F6F5;
+  --surface: #E1ECEA;
+  --ink: #18323B;
+  --muted: #587078;
+  --accent: #245B70;
+  --accent-soft: #477F83;
+  --line: #D0E0DE;
+  --overlay: rgb(12 31 42 / 0.55);
   color-scheme: light;
 }
 
-/* الوضع الداكن: يُطبَّق تلقائيًا حسب إعداد النظام (عند عدم اختيار صريح)،
-   أو صراحةً عندما يختار المستخدم "داكن". الاختيار الصريح "فاتح" يبطل إعداد النظام. */
+/* الوضع الداكن: يُطبَّق تلقائيًا حسب إعداد النظام
+   عند عدم اختيار سمة صريحة، أو عند اختيار "داكن". */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --bg: #10120b;
-    --surface: #191c12;
-    --ink: #ede6d6;
-    --muted: #a79e8a;
-    --accent: #cba25f;
-    --accent-soft: #8a6e3d;
-    --line: #2a2e1f;
-    --overlay: rgb(5 6 4 / 0.6);
+    --bg: #0B1720;
+    --surface: #12232D;
+    --ink: #E4EFF0;
+    --muted: #A2B9BE;
+    --accent: #75B9C0;
+    --accent-soft: #548E98;
+    --line: #263C47;
+    --overlay: rgb(2 9 14 / 0.65);
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #10120b;
-  --surface: #191c12;
-  --ink: #ede6d6;
-  --muted: #a79e8a;
-  --accent: #cba25f;
-  --accent-soft: #8a6e3d;
-  --line: #2a2e1f;
-  --overlay: rgb(5 6 4 / 0.6);
+  --bg: #0B1720;
+  --surface: #12232D;
+  --ink: #E4EFF0;
+  --muted: #A2B9BE;
+  --accent: #75B9C0;
+  --accent-soft: #548E98;
+  --line: #263C47;
+  --overlay: rgb(2 9 14 / 0.65);
   color-scheme: dark;
 }
 
@@ -377,6 +378,7 @@ html {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -489,6 +491,7 @@ input[type="range"].seek::-moz-range-thumb {
   100% {
     transform: scaleY(0.35);
   }
+
   50% {
     transform: scaleY(1);
   }

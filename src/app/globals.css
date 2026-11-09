@@ -332,12 +332,13 @@ html[data-layout="pages"] section:has(.pages) {
   transition: color 260ms ease, opacity 260ms ease;
 }
 
-/* أثناء التلاوة: الكلمات القادمة باهتة، والمقروءة كاملة */
-html[data-effect="fade"] .w {
+/* أثناء التلاوة: الكلمات القادمة باهتة (الافتراضي «لون باهت») */
+.mushaf-text[data-live] .w:not(.done):not(.now) {
   color: var(--muted);
 }
 
-html[data-effect="reveal"] .w {
+/* «ظهور تدريجي»: الكلمات القادمة مخفية حتى تُتلى */
+html[data-effect="reveal"] .mushaf-text[data-live] .w:not(.done):not(.now) {
   opacity: 0;
 }
 
